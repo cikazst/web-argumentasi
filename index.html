@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="header sticky-top">
+    <nav class="navbar navbar-light shadow  " style="background-color: #001427;">
+         <div class="kirinav">
+            <span>Cika Zahratus Syita (19)</span>
+        </div>
+        <div class="navmenu">
+            <a href="#tentang">Tentang</a>
+            <a href="#dampak">Dampak</a>
+            <a href="#solusi">Solusi</a>
+        </div>
+    </nav>
+
+     <div class="alert-banner">
+        AI (Artificial Intelligence) Membantu atau Berbahaya? Waspadai Deepfake!
+    </div>
+    </div>
+
+    <div class="hero">
+        <img src="AI & deepfake.png" alt="" srcset="">
+    </div>
+
+    <section class="content-section" id="tentang">
+        <h2 class="section-title">Tentang AI</h2>
+        <div class="section-content">
+            <p>Kecerdasan buatan (Artificial Intelligence/AI) merupakan teknologi yang berkembang pesat dan membawa banyak manfaat bagi kehidupan manusia dan membantu. Kita belajar, bekerja, dan berinteraksi. Namun, di balik kemudahan yang ditawarkan, AI juga membawa risiko serius ketika jatuh ke tangan yang salah. Salah satu contoh penyalahgunaan yang berbahaya adalah deepfake, yaitu teknologi manipulasi digital yang dapat menciptakan tampilan visual palsu seperti gambar, video dan suara yang sulit dibedakan dari aslinya.</p>
+        </div>
+    </section> 
+    <section class="content-section" id="dampak">
+        <h2 class="section-title">Dampak AI</h2>
+        <div class="impact-grid">
+            <div class="impact-card impact-positive">
+                <h3>Positif</h3>
+                <p>Dampak positif dari AI adalah:</p>
+                <ul class="impact-list">
+                    <li>Efisiensi & otomatisasi kerja</li>
+                    <li>Memudahkan analisis data/informasi berulang</li>
+                    <li>Diagnosis medis lebih detail. Hingga pengonhan publik, sehingga lebih hemat waktu/biaya</li>
+                    <li>Pendidikan lebih interaktif</li>
+                    <li>inovasi di bidang transportasi dan keamanan</li>
+                    <li>Pengambilan keputusan berbasis data </li>
+                    <li>Pertanian cerdas dengan prediksi cuaca dan pemantauan tanaman</li>
+                    <li>Respon darurat & bencana lebih cepat lewat sistem prediksi dan pemetaan real-time</li>
+                    </ul>
+            </div>
+            <div class="impact-card impact-negative">
+                <h3>Negatif</h3>
+                <p>Dampak negatif dari AI adalah terjadinya deepfake, contoh dampak dari deepfake:</p>
+                <ul class="impact-list">
+                    <li>Penyebaran hoaks & manipulasi politik</li>
+                    <li>Penipuan identitas & pencemaran nama baik publik, sehingga menyesatkan masyarakat, memicu kerugian finansial & reputasi</li>
+                    <li>masyarakat sulit membedakan fakta & fiksi</li>
+                    <li>Ancaman privasi & keamanan data pribadi</li>
+                    <li>Penggunaan dalam kejahatan siber, seperti pemerasan & penipuan online</li>
+                    <li>Gangguan psikologis & sosial, seperti kecemasan & ketidakpercayaan sosial</li>
+                </ul>
+            </div>
+        </div>
+    </section>   
+
+
+     <script>
+        // Create floating particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            const size = Math.random() * 4 + 2;
+            const startPosition = Math.random() * 100;
+            const animationDuration = Math.random() * 20 + 10;
+            
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.left = startPosition + '%';
+            particle.style.animationDuration = animationDuration + 's';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            
+            document.getElementById('particles').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, (animationDuration + 20) * 1000);
+        }
+
+        // Create particles continuously
+        setInterval(createParticle, 300);
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Image hover effects
+        document.querySelectorAll('.image-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.filter = 'brightness(1.2) contrast(1.1)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.filter = 'brightness(1) contrast(1)';
+            });
+        });
+
+        // Add loading animation to cards
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.section-content, .impact-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

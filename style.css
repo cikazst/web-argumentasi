@@ -1,0 +1,180 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1d1d47, #1a2647, #244670);
+    min-height: 100vh;}
+
+.kirinav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: medium;
+    font-size: 18px;
+    color: white;
+    margin-left: 30px;
+}
+
+.navmenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: medium;
+    font-size: 18px;
+    color: white;
+    margin-right: 30px;
+}
+
+.navmenu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-size: 18px;
+}
+
+.navmenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.alert-banner {
+    background: linear-gradient(90deg, #d1bd4c, #ffed4e);
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    font-weight: SemiBold;
+    font-size: 16px;
+}
+
+.content-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 50px;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #ffd700;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 10px;
+    font-weight: bold;}
+
+.section-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Particles Background */
+.particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+}
+
+.particle {
+            position: absolute;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 50%;
+            animation: particleFloat 20s infinite  
+}
+
+@keyframes particleFloat {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+}
+
+.impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+.impact-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+.impact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(255, 215, 0, 0.2);
+        }
+
+.impact-card h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+}
+
+.impact-card p {
+            color: white;
+            line-height: 1.6;
+}
+
+.impact-positive {
+    border-left: 4px solid #4ade80;
+}
+
+.impact-negative {
+            border-left: 4px solid #f87171;
+}
+
+.impact-list {
+            list-style: none;
+            padding-left: 0;
+}
+
+.impact-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            color: white;
+}
+
+.impact-positive .impact-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4ade80;
+            font-weight: bold;
+}
+
+.impact-negative .impact-list li::before {
+            content: "⚠";
+            position: absolute;
+            left: 0;
+            color: #f87171;
+}
